@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Good-bye</title>
+  <style>
+    body {
+      background-color: black;
+      color: #d4af37;
+      font-family: monospace;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      text-align: center;
+    }
+    
+    .container {
+      max-width: 600px;
+      padding: 20px;
+      opacity: 0;
+      transition: opacity 1s ease-in;
+    }
+    
+    .notice {
+      font-size: 14px;
+      opacity: 0.5;
+      margin-bottom: 30px;
+    }
+    
+    .divider {
+      width: 60px;
+      height: 1px;
+      background-color: #d4af37;
+      margin: 30px auto;
+    }
+    
+    .message {
+      font-size: 24px;
+      line-height: 1.6;
+    }
+    
+    .footer {
+      font-size: 14px;
+      opacity: 0.6;
+      margin-top: 20px;
+    }
+    
+    .flicker {
+      animation: flicker 5s infinite alternate;
+    }
+    
+    @keyframes flicker {
+      0%, 80%, 100% {
+        opacity: 1;
+      }
+      90% {
+        opacity: 0.7;
+      }
+    }
+    
+    @media (max-width: 600px) {
+      .message {
+        font-size: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!--if you really want it search for me ! find me ! .. i'll guide those who really wants it !-->
+  <div class="container">
+    <div class="notice">THIS SITE WILL BE DISCONTINUED</div>
+    
+    <div class="divider flicker"></div>
+    
+    <div class="message flicker">
+      <p>I tried to show you the truth</p>
+      <p>but nobody cared.</p>
+      <p>If you really want it, search for it—</p>
+      <p>it's somewhere out there.</p>
+    </div>
+    
+    <div class="divider flicker"></div>
+    
+    <div class="footer">Thank you for being part of our journey</div>
+  </div>
+
+  <script>
+    // Fade in effect
+    document.addEventListener('DOMContentLoaded', function() {
+      setTimeout(function() {
+        document.querySelector('.container').style.opacity = '1';
+      }, 100);
+    });
+  </script>
+</body>
+</html>
